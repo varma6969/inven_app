@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Add new Application</legend>
+                <div class="form-group pt-3">
+                    {{ form.application_name.label(class="form-control-label") }}
+                    
+                    {% if form.application_name.errors %}
+                        {{ form.application_name(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.application_name.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.application_name(class="form-control form-control-lg")}}
+                    {% endif %}
+                </div>
+                <div class="form-group pt-3">
+                    {{ form.app_manager.label(class="form-control-label") }}
+
+                    {% if form.app_manager.errors %}
+                        {{ form.app_manager(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.app_manager.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.app_manager(class="form-control form-control-lg")}}
+                    {% endif %}
+                </div>
+                <div class="form-group pt-3">
+                    {{ form.support_group.label(class="form-control-label") }}
+
+                    {% if form.support_group.errors %}
+                        {{ form.support_group(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.support_group.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.support_group(class="form-control form-control-lg")}}
+                    {% endif %}
+                </div>
+                <div class="form-group pt-3">
+                    {{ form.additionalInfo.label(class="form-control-label") }}
+
+                    {% if form.additionalInfo.errors %}
+                        {{ form.additionalInfo(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.additionalInfo.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.additionalInfo(class="form-control form-control-lg")}}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div class="form-group pt-3">
+                {{ form.submit(class="btn btn-outline-info")}}
+            </div>
+        </form>
+    </div>
+
+{% endblock content %}

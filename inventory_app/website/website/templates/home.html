@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="column" style="width:30%"> 
+            <h1>Total no.of Applications: {{ app_count }}</h1>
+            <h1>Total no.of Jvm's: {{ jvm_count }} <a class="text-danger ms-3" href="{{ url_for('reports.get_inventory_excel') }}"><i class="fas fa-download"></i></a></h1> 
+            <h1>Total no.of SOP's: {{ sop_count }}</h1> 
+            <h1>Current user is : {{ current_user.email }}</h1> 
+            
+        </div>
+        <div class="column" style="width:70%">
+            <img src="{{ url_for('static', filename='middleware.jpg') }}" class="rounded float-end" alt="">
+        </div>
+    </div>
+</div>
+{% endblock content %}

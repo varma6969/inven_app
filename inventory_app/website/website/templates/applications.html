@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+{% if current_user.role != 'user' %} 
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <a class="btn btn-primary" href="{{ url_for('apps.application_register') }}">+ application</a>    
+</div>
+{% endif %}
+{% for app in applications %}
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h3>{{ loop.index }}:<a href="{{ url_for('instances.get_instances_env', app_name=app.app_name, env='production') }}">{{ app.app_name }}</a> ({{ get_instances(app.app_name) }})
+                             <a class="text-danger ms-3" href="{{ url_for('instances.get_instances_excel', app_name=app.app_name) }}"><i class="fas fa-download"></i></a></h3>     
+      </div>
+      
+    </div>
+</div>
+
+{% endfor %}
+
+{% endblock content %}

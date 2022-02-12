@@ -1,0 +1,56 @@
+{% extends 'layout.html' %} 
+{% block content %} 
+<!-- <div>
+  <span>{{ jvm }}</span>
+</div> -->
+<br>
+{% if count == 0 %}
+  <h4>Total no.of WebLogic instances are : 0 </h4>
+{% else %}
+<h4>Total no.of WebLogic instances are : {{ count }} </h4>
+{% endif %}
+<br>
+<table class="table table-sm">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">JVM Name</th>
+      <th scope="col">Environment</th>
+      <th scope="col">Application Name</th>
+      <th scope="col">Host Name</th>
+      <th scope="col">IP Address</th>
+      <th scope="col">JDK Version</th>
+      <th scope="col">Product Type</th>
+      <th scope="col">Product Version</th>
+      <th scope="col">Latest patch</th>
+    </tr>
+  </thead>  
+  <tbody>
+    {% for jvm in jvms.items %}
+    <tr>        
+        <td>{{ jvm.jvm_name }}</td>
+        <td>{{ jvm.environment_name }}</td>
+        <td>{{ jvm.application_name }}</td>
+        <td>{{ jvm.host_name }}</td>
+        <td>{{ jvm.ip_name }}</td>
+        <td>{{ jvm.jdk_version }}</td>
+        <td>{{ jvm.product_type }}</td>
+        <td>{{ jvm.product_version }}</td>
+        <td>{{ jvm.patch_level }}</td>
+      </tr>
+      {% endfor %}
+  </tbody>  
+</table>
+
+{% for page_num in jvms.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+  {% if page_num %}
+    {% if jvms.page == page_num %}
+      <a class="btn btn-primary mb-4" href="{{ url_for('instances.get_weblogic', page=page_num)}}">{{ page_num }}</a>
+    {% else %}
+      <a class="btn btn-outline-primary mb-4" href="{{ url_for('instances.get_weblogic', page=page_num)}}">{{ page_num }}</a>
+    {% endif %}
+  {% else %}
+    ...
+  {% endif %}  
+{% endfor %}
+
+{% endblock content %}

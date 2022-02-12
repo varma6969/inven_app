@@ -1,0 +1,568 @@
+    1  sudo apt install build-essential dkms linux-headers-$(uname-r)
+    2  cd /
+    3  ls
+    4  celar
+    5  clear
+    6  cd /
+    7  ls
+    8  df -h
+    9  pwd
+   10  cd /dev/sda5
+   11  cd dev
+   12  ls
+   13  cd /
+   14  celar
+   15  clear
+   16  ipconfig
+   17  clear
+   18  ifconfig
+   19  sudo apt install net-tools
+   20  ifconfig
+   21  cd /etc/hosts
+   22  vi /etc/hosts
+   23  ./pycharm.sh 
+   24  python3
+   25  clear
+   26  ./pycharm.sh 
+   27  ls
+   28  untar Py_Workspace.rar 
+   29  sudo apt update
+   30  install unrar
+   31  sudo apt install unrar
+   32  ls
+   33  unrar Py_Workspace.rar
+   34  unrar e -r Py_Workspace.rar
+   35  man unrar
+   36  unrar e -r Py_Workspace.rar Py_Workspace
+   37  ls
+   38  ls -lart
+   39  chmod 665 test.py 
+   40  ls -lart
+   41  test.py
+   42  ./test.py
+   43  python test.py
+   44  jupyter lab
+   45  ls
+   46  ./Anaconda3-2020.11-Linux-x86_64.sh
+   47  bash
+   48  ls -lart
+   49  chmod 775 Anaconda3-2020.11-Linux-x86_64.sh
+   50  ./Anaconda3-2020.11-Linux-x86_64.sh 
+   51  vi test_json.json
+   52  code .
+   53  sudo dpkg -i code_1.55.2-1618307277_amd64.deb 
+   54  sudo apt-get update
+   55  sudo apt-get upgrade
+   56  init 0
+   57  sudo apt-get update
+   58  sudo apt-get upgrade
+   59  python
+   60  python3
+   61  clear
+   62  pwd
+   63  code .
+   64  cd Desktop/
+   65  ls
+   66  sudo apt install python-pip
+   67  sudo apt install python3-pip
+   68  sudo apt install virtualenv
+   69  clear
+   70  pip freeze
+   71  pip3 freeze
+   72  clear
+   73  mkdir dev
+   74  cd dec
+   75  cd dev/
+   76  clear
+   77  virtualenv -p python3 app1_venv
+   78  ls
+   79  python
+   80  clear
+   81  source app1_venv/bin/activate
+   82  ls
+   83  clear
+   84  pip preeze
+   85  pip freeze
+   86  pip list
+   87  clear
+   88  pip install flask
+   89  pip list
+   90  pip install mysql-connector-python
+   91  pip install pymongo
+   92  clear
+   93  pip list
+   94  clear
+   95  source app1_venv/bin/activate
+   96  code .
+   97  ls
+   98  python hello.py 
+   99  init 0
+  100  sudo apt-get install sublime-text
+  101  sudo snap install sublime-text
+  102  sudo snap install sublime-text --classic
+  103  pwd
+  104  ls
+  105  source app1_venv/bin/activate
+  106  python server.py 
+  107  python simple_crud_server.py 
+  108  source /home/varma/vs_python/dev/app1_venv/bin/activate
+  109  /home/varma/vs_python/dev/app1_venv/bin/python /home/varma/vs_python/dev/simple_crud_server.py
+  110  import secrets
+  111  python3
+  112  source crud_env/bin/activate
+  113  python app.py 
+  114  pip install email-validator
+  115  python app.py 
+  116  python3
+  117  clear
+  118  tree
+  119  sudo apt install tree
+  120  tree
+  121  ls
+  122  cd app
+  123  tree
+  124  python3 run.py
+  125  ls
+  126  cd ..
+  127  python3 run.py
+  128  python3
+  129  tree
+  130  cd app
+  131  tree
+  132  cd ..
+  133  pip install flask-bcrypt
+  134  python3
+  135  source crud_env/bin/activate
+  136  python3 run.py 
+  137  source /home/varma/vs_python/CRUD/crud_env/bin/activate
+  138  python3
+  139  pip install flask-login
+  140  ls
+  141  cd flask_sample_crud_v2
+  142  python app.py 
+  143  source /home/varma/vs_python/Class_Example/class_env/bin/activate
+  144  python test_simple_crud.py 
+  145  pip install requests
+  146  python test_simple_crud.py 
+  147  pwd
+  148  ls
+  149  cd flask_sample_crud_v2
+  150  cd ..
+  151  source class_env/bin/activate
+  152  cd flask_sample_crud_v2
+  153  python app.py 
+  154  code .
+  155  source class_env/bin/activate
+  156  code .
+  157  ls
+  158  python run.py 
+  159  ls
+  160  source crud_env/bin/activate
+  161  python3 run.py 
+  162  source /home/varma/vs_python/CRUD/crud_env/bin/activate
+  163  ifconfig
+  164  ping windowsmachine
+  165  vi /etc/hosts
+  166  su root
+  167  sudo su -
+  168  ping 10.0.2.15
+  169  ping windowsmachine
+  170  cat /etc/hosts
+  171  iptables off
+  172  man iptables
+  173  stop iptables
+  174  sudo su
+  175  ipconfig
+  176  ifconfig
+  177  ping windowsmachine
+  178  ping 192.168.0.106
+  179  ifconfig
+  180  ping windowshost
+  181  ping windowsmachine
+  182  ls
+  183  code .
+  184  pip install virtualenv
+  185  ls
+  186  virtualenv -p python3 venv
+  187  ls
+  188  pip install flask
+  189  mkdir static
+  190  mkdir templates
+  191  pip list
+  192  clear
+  193  source venv/bin/activate
+  194  pip freeze
+  195  pip install flask
+  196  python -m pip install --upgrade pip
+  197  pip list
+  198  cd ../..
+  199  pwd
+  200  deactivate
+  201  pwd
+  202  python main.py 
+  203  code .
+  204  code .
+  205  source venv/bin/activate
+  206  ifconfig
+  207  ping windowsmachine
+  208  ping windowshost
+  209  ping 192.168.56.102
+  210  cat /etc/hosts
+  211  sudo su
+  212  ping windowshost
+  213  pwd
+  214  ls
+  215  source venv/bin/activate
+  216  python3 main.py 
+  217  cd website/
+  218  python3 main.py 
+  219  pwd
+  220  pip install sqlalchemy
+  221  pip install sqlalchemy_utils
+  222  python3 main.py 
+  223  tree
+  224  python3 run.py
+  225  cls
+  226  clear
+  227  python3 run.py
+  228  clear
+  229  python3 run.py
+  230  source /home/varma/twt/simple_app_twt/venv/bin/activate
+  231  pip install flask-wtf
+  232  ls
+  233  pip install flask-sqlalchemy
+  234  python
+  235  pwd
+  236  ls
+  237  cd website/
+  238  python
+  239  python3
+  240  cls
+  241  clear
+  242  python3
+  243  tree
+  244  python3
+  245  source /home/varma/twt/simple_app_twt/venv/bin/activate
+  246  /home/varma/twt/simple_app_twt/venv/bin/python /home/varma/twt/simple_app_twt/website/website/forms.py
+  247  clear
+  248  ls
+  249  cd website/
+  250  python3 run.py 
+  251  source /home/varma/twt/simple_app_twt/venv/bin/activate
+  252  ls
+  253  python run.py 
+  254  cd ..
+  255  source venv/bin/activate
+  256  cd website/
+  257  python3 run.py 
+  258  source venv/bin/activate
+  259  ls
+  260  cd website/
+  261  python3 run.py 
+  262  source /home/varma/twt/simple_app_twt/venv/bin/activate
+  263  ls
+  264  python3
+  265  code .
+  266  code .
+  267  ls
+  268  source venv/bin/activate
+  269  ls
+  270  cd website/
+  271  python run.py 
+  272  source /home/varma/twt/simple_app_twt/venv/bin/activate
+  273  pwd
+  274  python3
+  275  ls
+  276  cd website/
+  277  python3
+  278  ls
+  279  source venv/bin/activate
+  280  ls
+  281  cd website/
+  282  python3 run.py 
+  283  code .
+  284  ls
+  285  source venv/bin/activate
+  286  cd website/
+  287  python3 run.py 
+  288  source venv/bin/activate
+  289  cd website/
+  290  python3 run.py 
+  291  code .
+  292  source venv/bin/activate
+  293  cd website/
+  294  python3 run.py 
+  295  source /home/varma/twt/simple_app_twt/venv/bin/activate
+  296  /home/varma/twt/simple_app_twt/venv/bin/python /home/varma/.vscode/extensions/ms-python.python-2021.4.765268190/pythonFiles/pyvsc-run-isolated.py pip install -U autopep8
+  297  source /home/varma/twt/simple_app_twt/venv/bin/activate
+  298  ls
+  299  python3
+  300  source venv/bin/activate
+  301  cd website/
+  302  python3 run.py 
+  303  code .
+  304  source venv/bin/activate
+  305  cd website/
+  306  python3 run.py 
+  307  source /home/varma/twt/simple_app_twt/venv/bin/activate
+  308  ls
+  309  python3
+  310  source venv/bin/activate
+  311  cd website/
+  312  python run.py 
+  313  pip install email_validator
+  314  python run.py 
+  315  source /home/varma/twt/simple_app_twt/venv/bin/activate
+  316  python3
+  317  code .
+  318  source venv/bin/activate
+  319  cd website/
+  320  python run.py 
+  321  pip install flask-bcrypt
+  322  python -m pip install --upgrade pip
+  323  python run.py 
+  324  pip install flask-login
+  325  python run.py 
+  326  pip install flask-admin
+  327  python run.py 
+  328  source /home/varma/twt/simple_app_twt/venv/bin/activate
+  329  python3
+  330  source venv/bin/activate
+  331  cd  website/
+  332  python run.py 
+  333  source /home/varma/twt/simple_app_twt/venv/bin/activate
+  334  python3
+  335  pip list
+  336  code .
+  337  cd website/
+  338  python run.py 
+  339  source /home/varma/twt/simple_app_twt/venv/bin/activate
+  340  python3
+  341  from flask_bcrypt import Bcrypt
+  342  python
+  343  git status
+  344  clear
+  345  git pull https://github.com/varma6969/my_projects.git
+  346  ls
+  347  git clone https://github.com/varma6969/my_projects.git
+  348  ls
+  349  cd ..
+  350  git clone https://github.com/varma6969/my_projects.git
+  351  ls
+  352  cd website/
+  353  ls
+  354  python run.py 
+  355  ls
+  356  cd ..
+  357  source venv/bin/activate
+  358  cd website/
+  359  python run.py 
+  360  source /home/varma/twt/my_projects/venv/bin/activate
+  361  python3
+  362  ls
+  363  python3
+  364  code .
+  365  source venv/bin/activate
+  366  cd website/
+  367  python run.py 
+  368  clear
+  369  git status
+  370  git add
+  371  git add .
+  372  git status
+  373  git commit -m "Added file upload functionality for SOP's and changed the master key"
+  374  git status
+  375  git remote -v
+  376  git push origin master
+  377  source /home/varma/twt/simple_app_twt/venv/bin/activate
+  378  python3
+  379  source venv/bin/activate
+  380  cd website/
+  381  python run.py 
+  382  python
+  383  cd website/
+  384  python
+  385  ls
+  386  cd ..
+  387  python3
+  388  ls
+  389  cd ..
+  390  source venv/bin/activate
+  391  python3
+  392  cd website/
+  393  python3
+  394  code .
+  395  source /home/varma/twt/simple_app_twt/venv/bin/activate
+  396  python3
+  397  source venv/bin/activate
+  398  cd website/
+  399  python run.py 
+  400  cd website/
+  401  python run.py 
+  402  code .
+  403  source venv/bin/activate
+  404  cd website/
+  405  python run.py 
+  406  cd ..
+  407  pip install xlwt
+  408  cd website/
+  409  python run.py 
+  410  source venv/bin/activate
+  411  cd website/
+  412  python run.py 
+  413  cls
+  414  clear
+  415  git status
+  416  cd ..
+  417  ls
+  418  cd ..
+  419  ls
+  420  git status
+  421  git init
+  422  git status
+  423  git add .
+  424  cd simple_app_twt/website/
+  425  ls
+  426  cd ..
+  427  ls
+  428  ls -lart
+  429  rm -rf .git
+  430  ls
+  431  cd ..
+  432  ls
+  433  git status
+  434  git commit -m "App with succesful login, user management, admin page, upload/download sop, download reports as excel"
+  435  git status
+  436  git remote -v
+  437  git remote -V
+  438  git remote add origin https://github.com/varma6969/inventory.git
+  439  git remote -V
+  440  git remote -v
+  441  git push origin master
+  442  ls
+  443  ls -lart
+  444  rm -rf .git
+  445  ls
+  446  cd simple_app_twt/
+  447  ls
+  448  git status
+  449  ls
+  450  git init
+  451  ls -lart
+  452  cat .git
+  453  cd .git
+  454  ls
+  455  cd ..
+  456  ls
+  457  ls -lart
+  458  git status
+  459  cd .git
+  460  ls
+  461  cd conf
+  462  cat config 
+  463  cd ..
+  464  ls
+  465  ls -lart
+  466  ls
+  467  rm -rf .git
+  468  ls
+  469  cd ..
+  470  ls -lart
+  471  ls
+  472  git init
+  473  ls -lart
+  474  git status
+  475  git add .
+  476  git status
+  477  git commit -m "App with functionalities like user/admin login, user management, Sop upload/download, Inventory file download as excel from db"
+  478  git status
+  479  git remote add origin https://github.com/varma6969/inventory_app.git
+  480  git remote -v
+  481  git branch -M master
+  482  git push -u origin master
+  483  cd website/
+  484  python run.py 
+  485  pwd
+  486  cd ..
+  487  ls
+  488  source venv/bin/activate
+  489  cd website/
+  490  python3 run.py 
+  491  pip list
+  492  ls
+  493  cd ..
+  494  pip list
+  495  ls
+  496  cd venv/
+  497  ls
+  498  cd bin/
+  499  ls
+  500  cd ..
+  501  ls
+  502  pip install flask_sqlalchemy
+  503  ls
+  504  cd we
+  505  cd website/
+  506  python run.py 
+  507  cd ..
+  508  pip freeze
+  509  clear
+  510  ls
+  511  exit
+  512  cd website/
+  513  python run.py 
+  514  source env/bin/activate
+  515  cd website/
+  516  cd ..
+  517  code .
+  518  source env/bin/activate
+  519  cd website/
+  520  python run.py 
+  521  ls
+  522  cd website/
+  523  ls
+  524  cd ..
+  525  ls
+  526  cd ..
+  527  ls
+  528  cd twt/
+  529  ls
+  530  cd inventory_app/
+  531  ls
+  532  cd env/
+  533  ls
+  534  cd bin/
+  535  ls
+  536  ./activate.sh
+  537  ls
+  538  ls -lart
+  539  activate
+  540  ls
+  541  cd ../..
+  542  ls
+  543  cd website/
+  544  ls
+  545  run.py
+  546  ./run.py
+  547  cd ../..
+  548  ls
+  549  cd ..
+  550  ls
+  551  cd twt
+  552  ls
+  553  cd inventory_app/
+  554  ls
+  555  cd env/
+  556  ls
+  557  cd bin/
+  558  ls
+  559  venv activate
+  560  virtualenv activate
+  561  pip activate
+  562  clear
+  563  ls
+  564  cd ..
+  565  ls
+  566  venv activate
+  567  history
+  568  history > ~/twt/commands.txt

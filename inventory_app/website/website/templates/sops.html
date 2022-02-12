@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% if current_user.role != 'user' %} 
+<form method="POST" enctype="multipart/form-data">
+<div class="form-group">
+    {{ form.file_data.label() }}
+    {{ form.file_data(class="form-control-file") }}
+    {% if form.file_data.errors %}
+        {% for error in form.file_data.errors %}
+            <span class="text-danger">{{ error }}</span></br>
+        {% endfor %}
+    {% endif %}
+    {{ form.submit(class="btn btn-small btn-primary") }}
+</div>
+</form>
+{% endif %}
+{% if sop_count == 0 %}
+<h4>Total no.of SOP's are : 0 </h4>
+{% else %}
+<h4>Total no.of SOP's are : {{ sop_count }} </h4>
+{% endif %}
+
+{% for doc in docs %}
+<div class="container-fluid">
+    <ul class="list-group mt-1">
+        <li class="list-group-item justify-content-between align-items-center">
+            <a href="#">{{ doc.f_name }}</a>
+            <a class="text-danger ms-3" href="{{ url_for('sops.sop_download', sop_name=doc.f_name) }}"><i class="fas fa-download"></i></a> 
+            {% if current_user.role != 'user' %} 
+            <a class="text-danger ms-3" href="{{ url_for('sops.sop_delete', sop_name=doc.f_name) }}"><i class="far fa-trash-alt"></i></a> 
+            {% endif %}            
+        </li>    
+    </ul>
+</div>
+{% endfor %}
+
+{% endblock content %}

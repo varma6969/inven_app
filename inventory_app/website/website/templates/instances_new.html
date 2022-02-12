@@ -1,0 +1,216 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+
+<nav class="nav">
+  <a class="nav-link active" href="#prodInstances">PROD</a>
+  <a class="nav-link" href="#uatInstances">UAT/STAGE</a>
+  <a class="nav-link" href="#qaInstances">TEST/QA</a>
+  <a class="nav-link" href="#devInstances">DEV/SIT</a> 
+  <a class="nav-link" href="#">+ Instance</a> 
+</nav>
+
+
+{% if current_user.role != 'user' %} 
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <a class="btn btn-primary" href="{{ url_for('instances.instance_register', app_name=app.app_name) }}">+ instance</a> 
+  <!-- <button class="btn btn-primary" type="button">Button</button> -->
+</div>
+{% endif %}
+
+{% if jvm.environment_name == 'prod' or jvm.environment_name == 'Prod' or jvm.environment_name == 'production' or jvm.environment_name == 'PRODUCTION' or jvm.environment_name == 'PROD' %}
+<div id="prodInstances">
+<table class="table table-sm mt-1">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">JVM Name</th>
+        <th scope="col">Environment</th>
+        <th scope="col">Application Name</th>
+        <th scope="col">Host Name</th>
+        <th scope="col">IP Address</th>
+        <th scope="col">JDK Version</th>
+        <th scope="col">Product Type</th>
+        <th scope="col">Product Version</th>
+        <th scope="col">Latest patch</th>
+        {% if current_user.role != 'user' %}  
+        <th scope="col">Actions</th>
+        {% endif %}
+
+      </tr>
+    </thead>  
+    <tbody>
+      {% for jvm in jvms %}
+      {% if jvm.environment_name == 'prod' or jvm.environment_name == 'Prod' or jvm.environment_name == 'production' or jvm.environment_name == 'PRODUCTION' or jvm.environment_name == 'PROD' %}
+      <tr>        
+          <td>{{ jvm.jvm_name }}</td>
+          <td>{{ jvm.environment_name }}</td>
+          <td>{{ jvm.application_name }}</td>
+          <td>{{ jvm.host_name }}</td>
+          <td>{{ jvm.ip_name }}</td>
+          <td>{{ jvm.jdk_version }}</td>
+          <td>{{ jvm.product_type }}</td>
+          <td>{{ jvm.product_version }}</td>
+          <td>{{ jvm.patch_level }}</td>
+          {% if current_user.role != 'user' %}  
+          <td><a class="primary" href="{{ url_for('instances.instance_update', jvm=jvm.jvm_name, env=jvm.environment_name, app_name=jvm.application_name) }}">Edit</a>
+              <a class="primary ms-3" href="{{ url_for('instances.instance_delete', jvm=jvm.jvm_name, env=jvm.environment_name, app_name=jvm.application_name) }}">Del</a> 
+          </td>
+          {% endif %}
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </tbody>  
+  </table>
+</div>
+{% endif %}
+
+<div id="uatInstances">
+<table class="table table-sm mt-1">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">JVM Name</th>
+        <th scope="col">Environment</th>
+        <th scope="col">Application Name</th>
+        <th scope="col">Host Name</th>
+        <th scope="col">IP Address</th>
+        <th scope="col">JDK Version</th>
+        <th scope="col">Product Type</th>
+        <th scope="col">Product Version</th>
+        <th scope="col">Latest patch</th>
+        {% if current_user.role != 'user' %}  
+        <th scope="col">Actions</th>
+        {% endif %}
+
+      </tr>
+    </thead>  
+    <tbody>
+      {% for jvm in jvms %}
+      {% if jvm.environment_name == 'UAT' or jvm.environment_name == 'Uat' or jvm.environment_name == 'uat' or jvm.environment_name == 'STAGE' or jvm.environment_name == 'Stage' or jvm.environment_name == 'stage' %}
+      <tr>        
+          <td>{{ jvm.jvm_name }}</td>
+          <td>{{ jvm.environment_name }}</td>
+          <td>{{ jvm.application_name }}</td>
+          <td>{{ jvm.host_name }}</td>
+          <td>{{ jvm.ip_name }}</td>
+          <td>{{ jvm.jdk_version }}</td>
+          <td>{{ jvm.product_type }}</td>
+          <td>{{ jvm.product_version }}</td>
+          <td>{{ jvm.patch_level }}</td>
+          {% if current_user.role != 'user' %}  
+          <td><a class="primary" href="{{ url_for('instances.instance_update', jvm=jvm.jvm_name, env=jvm.environment_name, app_name=jvm.application_name) }}">Edit</a>
+              <a class="primary ms-3" href="{{ url_for('instances.instance_delete', jvm=jvm.jvm_name, env=jvm.environment_name, app_name=jvm.application_name) }}">Del</a> 
+          </td>
+          {% endif %}
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </tbody>  
+  </table>
+  </div>
+
+<div id="qaInstances">
+<table class="table table-sm mt-1">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">JVM Name</th>
+        <th scope="col">Environment</th>
+        <th scope="col">Application Name</th>
+        <th scope="col">Host Name</th>
+        <th scope="col">IP Address</th>
+        <th scope="col">JDK Version</th>
+        <th scope="col">Product Type</th>
+        <th scope="col">Product Version</th>
+        <th scope="col">Latest patch</th>
+        {% if current_user.role != 'user' %}  
+        <th scope="col">Actions</th>
+        {% endif %}
+
+      </tr>
+    </thead>  
+    <tbody>
+      {% for jvm in jvms %}
+      {% if jvm.environment_name == 'TEST' or jvm.environment_name == 'test' or jvm.environment_name == 'Test' or jvm.environment_name == 'QA' or jvm.environment_name == 'qa' or jvm.environment_name == 'Qa' %}
+      <tr>        
+          <td>{{ jvm.jvm_name }}</td>
+          <td>{{ jvm.environment_name }}</td>
+          <td>{{ jvm.application_name }}</td>
+          <td>{{ jvm.host_name }}</td>
+          <td>{{ jvm.ip_name }}</td>
+          <td>{{ jvm.jdk_version }}</td>
+          <td>{{ jvm.product_type }}</td>
+          <td>{{ jvm.product_version }}</td>
+          <td>{{ jvm.patch_level }}</td>
+          {% if current_user.role != 'user' %}  
+          <td><a class="primary" href="{{ url_for('instances.instance_update', jvm=jvm.jvm_name, env=jvm.environment_name, app_name=jvm.application_name) }}">Edit</a>
+              <a class="primary ms-3" href="{{ url_for('instances.instance_delete', jvm=jvm.jvm_name, env=jvm.environment_name, app_name=jvm.application_name) }}">Del</a> 
+          </td>
+          {% endif %}
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </tbody>  
+  </table>
+  </div>
+
+<div id="devInstances"></div>
+<table class="table table-sm mt-1">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">JVM Name</th>
+        <th scope="col">Environment</th>
+        <th scope="col">Application Name</th>
+        <th scope="col">Host Name</th>
+        <th scope="col">IP Address</th>
+        <th scope="col">JDK Version</th>
+        <th scope="col">Product Type</th>
+        <th scope="col">Product Version</th>
+        <th scope="col">Latest patch</th>
+        {% if current_user.role != 'user' %}  
+        <th scope="col">Actions</th>
+        {% endif %}
+
+      </tr>
+    </thead>  
+    <tbody>
+      {% for jvm in jvms %}
+      {% if jvm.environment_name == 'DEV' or jvm.environment_name == 'dev' or jvm.environment_name == 'Dev' or jvm.environment_name == 'Developement' or jvm.environment_name == 'SIT' or jvm.environment_name == 'sit' or jvm.environment_name == 'Sit' %}
+      <tr>        
+          <td>{{ jvm.jvm_name }}</td>
+          <td>{{ jvm.environment_name }}</td>
+          <td>{{ jvm.application_name }}</td>
+          <td>{{ jvm.host_name }}</td>
+          <td>{{ jvm.ip_name }}</td>
+          <td>{{ jvm.jdk_version }}</td>
+          <td>{{ jvm.product_type }}</td>
+          <td>{{ jvm.product_version }}</td>
+          <td>{{ jvm.patch_level }}</td>
+          {% if current_user.role != 'user' %}  
+          <td><a class="primary" href="{{ url_for('instances.instance_update', jvm=jvm.jvm_name, env=jvm.environment_name, app_name=jvm.application_name) }}">Edit</a>
+              <a class="primary ms-3" href="{{ url_for('instances.instance_delete', jvm=jvm.jvm_name, env=jvm.environment_name, app_name=jvm.application_name) }}">Del</a>             
+          </td>
+          {% endif %}
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </tbody>  
+    
+  </table>
+</div>
+
+  <br>
+  <div class="container-fluid">
+    <div>        
+      <h2><a data-bs-toggle="collapse" href="#appContacts" role="button" aria-expanded="false" aria-controls="appContacts">Contact Details</a></h2>       
+    </div>
+    <div class="collapse form-group" id="appContacts"><h3>
+        <textarea class="form-control" wrap="hard" rows="6">         
+        Manager : {{ app.app_manager }}
+        Support Group : {{ app.support_group }}       
+        Additional Info : {{ app.additional_info }}                 
+        </textarea> </h3> 
+    </div>
+</div>
+
+
+
+{% endblock content %} 

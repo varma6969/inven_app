@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<nav class="nav">  
+  <a class="nav-link" href="{{ url_for('users.user_management') }}">User Management</a>
+  <a class="nav-link" href="{{ url_for('reports.get_reports') }}">Reporting</a>
+  <a class="nav-link" href="#">add1</a>
+  <a class="nav-link" href="#">add2</a>
+  <a class="nav-link" href="#">add3</a>
+  <a class="nav-link" href="#">add4</a>
+  <a class="nav-link" href="#">add5</a>
+  <a class="nav-link" href="#">add6</a>
+  <a class="nav-link" href="#">add7</a>  
+  <a class="nav-link text-danger" href="#">+ add8</a> 
+</nav>
+
+<div class="container-fluid">
+<table class="table table-sm mt-1">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">User Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Role</th>
+        <th scope="col">Actions</th>        
+
+      </tr>
+    </thead>  
+    <tbody>
+      {% for user in users %}
+        <tr>        
+          <td>{{ user.user_name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.role }}</td>          
+          <td><a class="primary" href="{{ url_for('users.user_update', email=user.email) }}"><i class="far fa-edit"></i></a>
+              <a class="text-danger ms-3" href="{{ url_for('users.user_delete', email=user.email) }}"><i class="far fa-trash-alt"></i></a> 
+          </td>
+        </tr>
+        
+        {% endfor %}
+    </tbody>  
+  </table>
+</div>
+
+
+{% endblock content %} 

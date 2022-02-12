@@ -1,0 +1,141 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">{{ legend }}</legend>
+                <div class="form-group pt-3">
+                    {{ form.jvm_name.label(class="form-control-label") }}
+                    
+                    {% if form.jvm_name.errors %}
+                        {{ form.jvm_name(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.jvm_name.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.jvm_name(class="form-control form-control-lg")}}
+                    {% endif %}
+                </div>
+                <div class="form-group pt-3">
+                    {{ form.environment.label(class="form-control-label") }}
+
+                    {% if form.environment.errors %}
+                        {{ form.environment(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.environment.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.environment(class="form-control form-control-lg")}}
+                    {% endif %}
+                </div>
+                <!-- <div class="form-group pt-3">
+                    {{ form.app_name.label(class="form-control-label") }}
+
+                    {% if form.app_name.errors %}
+                        {{ form.app_name(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.app_name.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.app_name(class="form-control form-control-lg")}}
+                    {% endif %}
+                </div> -->
+                <div class="form-group pt-3">
+                    {{ form.hostname.label(class="form-control-label") }}
+
+                    {% if form.hostname.errors %}
+                        {{ form.hostname(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.hostname.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.hostname(class="form-control form-control-lg")}}
+                    {% endif %}
+                </div>
+                <div class="form-group pt-3">
+                    {{ form.ip_address.label(class="form-control-label") }}
+
+                    {% if form.ip_address.errors %}
+                        {{ form.ip_address(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.ip_address.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.ip_address(class="form-control form-control-lg")}}
+                    {% endif %}
+                </div>
+                <div class="form-group pt-3">
+                    {{ form.jdk_version.label(class="form-control-label") }}
+
+                    {% if form.jdk_version.errors %}
+                        {{ form.jdk_version(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.jdk_version.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.jdk_version(class="form-control form-control-lg")}}
+                    {% endif %}
+                </div>
+                <div class="form-group pt-3">
+                    {{ form.product_type.label(class="form-control-label") }}
+
+                    {% if form.product_type.errors %}
+                        {{ form.product_type(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.product_type.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.product_type(class="form-control form-control-lg")}}
+                    {% endif %}
+                </div>
+                <div class="form-group pt-3">
+                    {{ form.product_version.label(class="form-control-label") }}
+
+                    {% if form.product_version.errors %}
+                        {{ form.product_version(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.product_version.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.product_version(class="form-control form-control-lg")}}
+                    {% endif %}
+                </div>
+                <div class="form-group pt-3">
+                    {{ form.patch_level.label(class="form-control-label") }}
+
+                    {% if form.patch_level.errors %}
+                        {{ form.patch_level(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.patch_level.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.patch_level(class="form-control form-control-lg")}}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div class="form-group pt-3">
+                {{ form.submit(class="btn btn-outline-info")}}
+            </div>
+        </form>
+    </div>
+
+{% endblock content %}
